@@ -8,39 +8,31 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
-    this.parseInput = this.parseInput.bind(this);
+    this.state = { input: '' };
+    this.createMarkup = this.createMarkup.bind(this); // using arrow function below instead
   }
 
-  parseInput(text) {
-    const results = marked(text);
-    this.setState({ results });
+  createMarkup = () => {
+    const results = marked(this.state.input, {
+      // pedantic: false,
+      // gfm: true,
+      // tables: true,
+      // breaks: true,
+      sanitize: true,
+      // smartLists: true,
+      // smartypants: false,
+      // xhtml: false
+    });
+    return { __html: results };
   }
-
-  // componentDidMount() {
-  //   this.parseInput();
-  // }
 
   render() {
     return (
-      <div className="App">
+      <div className="container">
         <Header />
-        <InputPane
-          handleInputChange={this.parseInput} />
-        <OutputPane results={this.state.results} />
+        <InputPane handleInputChange={input => this.setState({ input })} />
+        <OutputPane createMarkup={this.createMarkup} />
       </div>
     );
   }
-
-  // render() {
-  //   return (
-  //     <div className="App">
-  //       <Header />
-  //       <InputPane 
-  //         text={this.state.text}
-  //         handleInputChange={this.parseInput} />
-  //       <OutputPane results={this.state.result} />
-  //     </div>
-  //   );
-  // }
 }
