@@ -8,12 +8,15 @@ export default class InputPane extends Component {
       input: [
         'h1 Heading\n===\n\n',
         'h2 Heading\n---\n\n',
-        'h3 Heading\n\n',
+        '### h3 Heading\n\n',
         'Paragraph.\n\n',
-        'Leave 2 spaces at the end of a line to do a  \nline break\n\n',
-        'Text attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\n',
-        'Unordered list:\n  * apples\n  * oranges\n  * pears\n\n',
-        'Numbered list:\n  1. apples\n  2. oranges\n  3. pears\n\n',
+        'Emphasis, aka italics, with * asterisks * or _underscores_.  \n',
+        'Strong emphasis, aka bold, with ** asterisks ** or __underscores__.  \n',
+        'Combined emphasis with ** asterisks and _underscores_ **.  \n',
+        'Strikethrough uses two tildes. ~~Scratch this.~~  \n',
+        'Monospace with `backticks`.\n\n',
+        '#### Unordered list:\n  * use asterisks\n  - or minuses\n  + or pluses\n\n',
+        '#### Numbered list:\n  1. apples\n  2. oranges\n  3. pears\n\n',
         'by [Keith Rodriguez](http://www.keithrodriguez.me)'
       ].join('')
     };
@@ -30,12 +33,14 @@ export default class InputPane extends Component {
 
   render() {
     return (
-      <textarea
-        className="input-pane"
-        wrap="off"
-        value={this.state.input}
-        onChange={event => this.onInputChange(event.target.value)}
-      />
+      <div className="input-pane">
+        <textarea
+          className="input"
+          wrap="off"
+          value={this.state.input}
+          onChange={event => this.onInputChange(event.target.value)}
+        />
+      </div>
     );
   }
 }

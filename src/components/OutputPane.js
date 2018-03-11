@@ -3,7 +3,7 @@ import React from 'react';
 const OutputPane = (props) => {
   return (
     <div
-      className="results"
+      className="output-pane"
       dangerouslySetInnerHTML={props.createMarkup()}
     />
   );

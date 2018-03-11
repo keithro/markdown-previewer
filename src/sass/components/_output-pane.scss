@@ -1,0 +1,11 @@
+.output-pane {
+  padding: 1.6rem;
+
+  & a {
+    color: $secondary;
+  }
+
+  & a:hover {
+    color: darken($secondary, 10%);
+  }
+}

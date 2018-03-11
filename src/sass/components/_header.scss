@@ -1,0 +1,49 @@
+.header {
+  grid-row: 1 / span 1;
+  grid-column: 1 / -1;
+  padding: 1.6rem;
+  color: $grey;
+  background-color: $primary-dark;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media only screen and(min-width: 31.25em) {
+    flex-direction: row;
+  }
+
+  &__main > * {
+    margin: 1rem 0;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__icon-box {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1rem;
+    background-color: $secondary;
+    text-decoration: none;
+    transition: background-color .2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: .8rem;
+    }
+
+    &:hover {
+      background-color: darken($secondary, 10%);
+    }
+  }
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: $grey;
+  }
+}

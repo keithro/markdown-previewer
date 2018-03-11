@@ -9,19 +9,13 @@ export default class App extends Component {
     super(props);
 
     this.state = { input: '' };
-    this.createMarkup = this.createMarkup.bind(this); // using arrow function below instead
+    // this.createMarkup = this.createMarkup.bind(this); // using arrow function below instead
   }
 
   createMarkup = () => {
     const results = marked(this.state.input, {
-      // pedantic: false,
       // gfm: true,
-      // tables: true,
-      // breaks: true,
       sanitize: true,
-      // smartLists: true,
-      // smartypants: false,
-      // xhtml: false
     });
     return { __html: results };
   }

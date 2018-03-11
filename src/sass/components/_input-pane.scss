@@ -1,9 +1,16 @@
 .input-pane {
+  padding: 1.6rem;
+}
+
+.input {
+  padding: 1.4rem;
   border: 1px solid #ddd;
-  // font-family: ;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.4rem;
   outline: none;
   resize: none;
   overflow: auto;
+  width: 100%;
   max-width: 100%;
-  height: 100%
+  height: 100%;
 }

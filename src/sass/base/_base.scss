@@ -1,17 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html {
-	font-size: 62.5%;
+	box-sizing: border-box;
+	font-size: 50%; // 1rem = 8 px
+	
+	@media only screen and (min-width: 56.25em) {  // 900px (900/16)
+		font-size: 62.5%;
+	}
 }
 
 body {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: $m-size;
-	background-color: #f6f6f6;
+	font-size: 1.6rem;
+	min-height: 100vh;
+	background-image: linear-gradient(to right bottom, $primary-light, $primary);
+  background-size: cover;
+	background-repeat: no-repeat;
 }
 
-button {
-	cursor: pointer;
-}
-
-button:disabled {
-	cursor: default;
+::selection {
+  background-color: $secondary;
+  color: $grey;
 }

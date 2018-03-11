@@ -1,0 +1,22 @@
+.container {
+  margin: 0;
+  max-width: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fdfdfd;
+  box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+
+  display: grid;
+  grid-template-rows: max-content repeat(2, 1fr);
+  
+  @media only screen and (min-width: 50em) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content 1fr;
+  }
+
+  @media only screen and (min-width: 75em) {
+    max-width: 120rem;
+    min-height: 0;
+    margin: 8rem auto;
+  }
+}
