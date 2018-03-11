@@ -4,7 +4,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__main">
-        <h1>Markdown Previewer</h1>
+        <h1>
+          <svg className="header__logo">
+            <use xlinkHref="images/sprite.svg#icon-code" />
+          </svg>
+          Markdown Previewer
+        </h1>
         <p>Start typing to preview your markup!</p>
       </div>
       <div className="header__links">

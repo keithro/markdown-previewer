@@ -16,6 +16,13 @@
     margin: 1rem 0;
   }
 
+  &__logo {
+    height: 2.6rem;
+    width: 2.6rem;
+    fill: $secondary;
+    margin-right: .5rem
+  }
+
   &__links {
     display: flex;
   }
