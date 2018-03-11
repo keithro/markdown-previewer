@@ -14,7 +14,7 @@ export default class InputPane extends Component {
         'Strong emphasis, aka bold, with ** asterisks ** or __underscores__.  \n',
         'Combined emphasis with ** asterisks and _underscores_ **.  \n',
         'Strikethrough uses two tildes. ~~Scratch this.~~  \n',
-        'Monospace with `backticks`.\n\n',
+        // 'Monospace with `backticks`.\n\n',
         '#### Unordered list:\n* use asterisks\n- or minuses\n+ or pluses\n\n',
         '#### Numbered list:\n1. apples\n2. oranges\n3. pears\n\n',
         '#### Code blocks\n```\nvar greeting = "hello world";  \nconsole.log(greeting);  \n```\n\n',
